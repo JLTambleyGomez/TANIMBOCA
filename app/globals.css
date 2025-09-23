@@ -1,8 +1,11 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0b827cab;
 }
 
 @theme inline {
@@ -14,7 +17,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #08837d;
     --foreground: #ededed;
   }
 }
@@ -23,4 +26,24 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/* Flechas (prev/next) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #0efff3 !important; /* color personalizado */
+}
+
+/* Bullets (paginación) */
+.swiper-pagination-bullet {
+  background: #0b827c !important;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0b827c !important;
+  opacity: 1;
 }
