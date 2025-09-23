@@ -179,27 +179,45 @@ export default function NavbarES() {
           </li>
 
           {/* Language switcher (mobile) */}
-          <li className="w-full m-auto">
-            <div className="flex flex-col w-full rounded-lg shadow-lg overflow-hidden">
-              <button
-                onClick={() => changeLanguage("es")}
-                className="px-4 py-2 text-left hover:bg-gray-100"
-              >
-                🇪🇸 Español
-              </button>
-              <button
-                onClick={() => changeLanguage("en")}
-                className="px-4 py-2 text-left hover:bg-gray-100"
-              >
-                🇬🇧 English
-              </button>
-              <button
-                onClick={() => changeLanguage("de")}
-                className="px-4 py-2 text-left hover:bg-gray-100"
-              >
-                🇩🇪 Deutsch
-              </button>
-            </div>
+          <li className="relative w-full text-center">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className="flex items-center justify-center gap-2 px-2 py-2 w-full bg-[#ffffff22] rounded-lg hover:bg-[#ffffff33]"
+              aria-label="Select language"
+            >
+              <Globe size={20} />
+              <span>
+                {languageFlags[currentLang]} {languageLabels[currentLang]}
+              </span>
+            </button>
+            {langOpen && (
+              <ul className="absolute left-1/2 -translate-x-1/2 mt-2 w-40 bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden z-50">
+                <li>
+                  <button
+                    onClick={() => changeLanguage("es")}
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                  >
+                    🇪🇸 Español
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => changeLanguage("en")}
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                  >
+                    🇬🇧 English
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => changeLanguage("de")}
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                  >
+                    🇩🇪 Deutsch
+                  </button>
+                </li>
+              </ul>
+            )}
           </li>
         </ul>
       )}
