@@ -20,10 +20,10 @@ export default function NavbarEN() {
       {/* Desktop menu */}
       <ul className="hidden md:flex gap-6 text-white font-medium">
         <li>
-          <a href="#about" className="hover:text-green-200">About Us</a>
+          <a href="/en#about" className="hover:text-green-200">About Us</a>
         </li>
         <li>
-          <a href="#categories" className="hover:text-green-200">Adventures</a>
+          <a href="/en#categories" className="hover:text-green-200">Adventures</a>
         </li>
         <li>
           <Link href="/en/sustainability" className="hover:text-green-200">Sustainability</Link>
@@ -32,13 +32,13 @@ export default function NavbarEN() {
           <Link href="/en/gallery" className="hover:text-green-200">Gallery</Link>
         </li>
         <li>
-          <a href="#footer" className="hover:text-green-200">Contact</a>
+          <a href="/en#footer" className="hover:text-green-200">Contact</a>
         </li>
       </ul>
 
       <div className="flex items-center gap-4">
         <Link
-          href="/en/book"
+          href="/en#footer"
           className="hidden md:inline-block bg-[#ffffff] text-[#0b827cab] font-bold px-4 py-2 rounded-lg"
         >
           Book Now
@@ -58,10 +58,10 @@ export default function NavbarEN() {
       {menuOpen && (
         <ul className="absolute top-full left-0 w-full items-center bg-[#0b827cce] backdrop-blur-sm shadow-md flex flex-col md:hidden p-4 gap-4 text-white font-medium">
           <li data-aos="fade-right">
-            <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-green-200">About Us</a>
+            <a href="/en#about" onClick={() => setMenuOpen(false)} className="hover:text-green-200">About Us</a>
           </li>
           <li data-aos="fade-right">
-            <a href="#categories" onClick={() => setMenuOpen(false)} className="hover:text-green-200">Adventures</a>
+            <a href="/en#categories" onClick={() => setMenuOpen(false)} className="hover:text-green-200">Adventures</a>
           </li>
 
            <li data-aos="fade-right">
@@ -72,11 +72,11 @@ export default function NavbarEN() {
             <Link href="/en/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link>
           </li>
           <li data-aos="fade-right">
-            <a href="#footer" onClick={() => setMenuOpen(false)} className="hover:text-green-200">Contact</a>
+            <a href="/en#footer" onClick={() => setMenuOpen(false)} className="hover:text-green-200">Contact</a>
           </li>
           <li data-aos="fade-right">
             <a
-              href="/en/book"
+              href="/en#footer"
               onClick={() => setMenuOpen(false)}
               className="bg-[#ffffff] text-[#0b827cab] font-bold px-4 py-2 rounded-lg"
             >

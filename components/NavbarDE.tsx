@@ -20,10 +20,10 @@ export default function NavbarDE() {
       {/* Desktop menu */}
       <ul className="hidden md:flex gap-6 text-white font-medium">
         <li>
-          <a href="#about" className="hover:text-green-200">Über uns</a>
+          <a href="/de#about" className="hover:text-green-200">Über uns</a>
         </li>
         <li>
-          <a href="#categories" className="hover:text-green-200">Abenteuer</a>
+          <a href="/de#categories" className="hover:text-green-200">Abenteuer</a>
         </li>
         <li>
           <Link href="/de/nachhaltigkeit" className="hover:text-green-200">Nachhaltigkeit</Link>
@@ -32,13 +32,13 @@ export default function NavbarDE() {
           <Link href="/de/gallery" className="hover:text-green-200">Galerie</Link>
         </li>
         <li>
-          <a href="#footer" className="hover:text-green-200">Kontakt</a>
+          <a href="/de#footer" className="hover:text-green-200">Kontakt</a>
         </li>
       </ul>
 
       <div className="flex items-center gap-4">
         <Link
-          href="/de/book"
+          href="/de#footer"
           className="hidden md:inline-block bg-[#ffffff] text-[#0b827cab] font-bold px-4 py-2 rounded-lg"
         >
           Reservieren
@@ -58,10 +58,10 @@ export default function NavbarDE() {
       {menuOpen && (
         <ul className="absolute top-full left-0 w-full items-center bg-[#0b827cce] backdrop-blur-sm shadow-md flex flex-col md:hidden p-4 gap-4 text-white font-medium">
           <li data-aos="fade-right">
-            <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-green-200">Über uns</a>
+            <a href="/de#about" onClick={() => setMenuOpen(false)} className="hover:text-green-200">Über uns</a>
           </li>
           <li data-aos="fade-right">
-            <a href="#categories" onClick={() => setMenuOpen(false)} className="hover:text-green-200">Abenteuer</a>
+            <a href="/de#categories" onClick={() => setMenuOpen(false)} className="hover:text-green-200">Abenteuer</a>
           </li>
           <li data-aos="fade-right">
             <Link href="/de/nachhaltigkeit" onClick={() => setMenuOpen(false)}>Nachhaltigkeit</Link>
@@ -70,11 +70,11 @@ export default function NavbarDE() {
             <Link href="/de/gallery" onClick={() => setMenuOpen(false)}>Galerie</Link>
           </li>
           <li data-aos="fade-right">
-            <a href="#footer" onClick={() => setMenuOpen(false)} className="hover:text-green-200">Kontakt</a>
+            <a href="/de#footer" onClick={() => setMenuOpen(false)} className="hover:text-green-200">Kontakt</a>
           </li>
           <li data-aos="fade-right">
             <a
-              href="/de/book"
+              href="/de#footer"
               onClick={() => setMenuOpen(false)}
               className="bg-[#ffffff] text-[#0b827cab] font-bold px-4 py-2 rounded-lg"
             >
