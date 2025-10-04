@@ -91,7 +91,7 @@ export default function BushcraftPageDE() {
 
         <div className="w-full h-80 rounded-lg overflow-hidden mb-12">
           <Image
-            src="/bushcraft-adventure.jpg"
+            src="/bushcraft.jpg"
             alt="Touristen beim Bushcraft- und Überlebenstraining im Amazonas-Dschungel"
             width={800}
             height={600}

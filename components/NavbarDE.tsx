@@ -69,7 +69,7 @@ export default function NavbarDE() {
       <div className="flex items-center gap-4 relative">
         {/* Reservieren */}
         <Link
-          href="/de/book"
+          href="/de#footer"
           className="hidden md:inline-block bg-[#ffffff] text-[#0b827cab] font-bold px-4 py-2 rounded-lg"
         >
           Reservieren
@@ -137,7 +137,7 @@ export default function NavbarDE() {
           <li><a href="/de#footer" onClick={() => setMenuOpen(false)}>Kontakt</a></li>
           <li>
             <Link
-              href="/de/book"
+              href="/de#footer"
               onClick={() => setMenuOpen(false)}
               className="bg-[#ffffff] text-[#0b827cab] font-bold px-4 py-2 rounded-lg"
             >

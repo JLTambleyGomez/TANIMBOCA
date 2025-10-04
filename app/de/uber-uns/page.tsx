@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import NavbarDE from "@/components/NavbarDE";
-
+import FooterES from "@/components/FooterES";
 export const metadata: Metadata = {
   title: "Über Uns | Tanimboca Amazonas",
   description:
@@ -157,6 +157,7 @@ export default function AboutPageDE() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </main>
+      <FooterES />
     </>
   );
 }

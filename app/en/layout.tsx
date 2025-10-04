@@ -47,6 +47,13 @@ export default function ENLayout({ children }: { children: ReactNode }) {
         position: 6,
         name: "Sustainability",
         item: `${siteUrl}/en/sustainability`,}
+        ,
+      {
+        "@type": "ListItem",
+        position: 7,
+        name: "Ethno-travel",
+        item: `${siteUrl}/en/ethno-travel`,}
+   
    
       
     ],

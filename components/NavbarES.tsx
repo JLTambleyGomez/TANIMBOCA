@@ -82,7 +82,7 @@ export default function NavbarES() {
       <div className="flex items-center gap-4 relative">
         {/* Reservar */}
         <Link
-          href="/es/book"
+          href="/es#footer"
           className="hidden md:inline-block bg-[#ffffff] text-[#0b827cab] font-bold px-4 py-2 rounded-lg"
         >
           Reservar
@@ -170,7 +170,7 @@ export default function NavbarES() {
           </li>
           <li>
             <Link
-              href="/es/book"
+              href="/es#footer"
               onClick={() => setMenuOpen(false)}
               className="bg-[#ffffff] text-[#0b827cab] font-bold px-4 py-2 rounded-lg"
             >

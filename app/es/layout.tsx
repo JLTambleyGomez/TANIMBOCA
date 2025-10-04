@@ -47,7 +47,12 @@ export default function ESLayout({ children }: { children: ReactNode }) {
         "@type": "ListItem",
         position: 6,
         name: "Sostenibilidad",
-        item: `${siteUrl}/es/sostenibilidad`, }
+        item: `${siteUrl}/es/sostenibilidad`, },
+              {
+        "@type": "ListItem",
+        position: 7,
+        name: "ethno-travel",
+        item: `${siteUrl}/es/ethno-travel`, }
     ],
   };
 

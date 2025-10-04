@@ -92,7 +92,7 @@ export default function BushcraftPageES() {
 
                 <div className="w-full h-80 rounded-lg overflow-hidden mb-12">
                     <Image
-                        src="/bushcraft-adventure.jpg"
+                        src="/bushcraft.jpg"
                         alt="Turistas practicando bushcraft y supervivencia en la selva amazónica"
                         width={800}
                         height={600}

@@ -6,7 +6,7 @@ export default function CategoriesCardDE() {
     <div
       id="categories"
       className="relative w-full bg-fixed bg-center bg-cover"
-      style={{ backgroundImage: 'url("/test.jpg")' }}
+      style={{ backgroundImage: 'url("/pirarucu.jpeg")' }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 backdrop-brightness-75" />
@@ -20,7 +20,7 @@ export default function CategoriesCardDE() {
       </h1>
 
       {/* Inhalt */}
-      <div className="grid md:grid-cols-3 gap-6 p-6 max-w-6xl mx-auto relative z-10">
+      <div className="grid md:grid-cols-4 gap-6 p-6 max-w-7xl mx-auto relative z-10">
         {/* Kategorie 1 */}
         <div
           data-aos="fade-right"
@@ -94,11 +94,37 @@ export default function CategoriesCardDE() {
           </h3>
           <p className="text-white mb-4">
             Ideal für Familien, Freundesgruppen oder Alleinreisende. Lerne mit
-            dem Dschungel zu leben und überlebenstechniken im Herzen des
+            dem Dschungel zu leben und Überlebenstechniken im Herzen des
             Amazonas anzuwenden.
           </p>
           <Link
             href="/de/kategorien/bushcraft"
+            className="inline-block bg-[#08837D] hover:bg-[#17c2b9] text-white px-4 py-2 rounded-xl transition"
+          >
+            Details ansehen
+          </Link>
+        </div>
+
+        {/* Kategorie 4 - Ethno Travel */}
+        <div
+          data-aos="fade-left"
+          className="rounded-2xl shadow-lg bg-[#00000053] backdrop-blur-md p-6 hover:shadow-xl transition"
+        >
+          <Image
+            src="/ethno-travel.jpg"
+            alt="Ethno Travel"
+            width={400}
+            height={250}
+            className="w-full h-40 object-cover rounded-xl mb-4"
+          />
+          <h3 className="text-white text-lg font-bold mb-2">Ethno Travel</h3>
+          <p className="text-white mb-4">
+            Mehr als nur eine Reise – eine authentische Begegnung mit kultureller
+            Vielfalt. Teile Traditionen, Sprachen, Gastronomie und Weltanschauungen
+            mit indigenen Gemeinschaften.
+          </p>
+          <Link
+            href="/de/kategorien/ethno-travel"
             className="inline-block bg-[#08837D] hover:bg-[#17c2b9] text-white px-4 py-2 rounded-xl transition"
           >
             Details ansehen

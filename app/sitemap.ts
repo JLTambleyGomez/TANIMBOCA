@@ -2,11 +2,41 @@ import { MetadataRoute } from "next";
 import { siteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+
   const urls: MetadataRoute.Sitemap = [
-    // Home
+    // 🌐 HOME ES
     {
       url: `${siteUrl}/es`,
-      lastModified: new Date(),
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 1,
+      alternates: {
+        languages: {
+          es: `${siteUrl}/es`,
+          en: `${siteUrl}/en`,
+          de: `${siteUrl}/de`,
+        },
+      },
+    },
+    // 🌐 HOME EN
+    {
+      url: `${siteUrl}/en`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 1,
+      alternates: {
+        languages: {
+          es: `${siteUrl}/es`,
+          en: `${siteUrl}/en`,
+          de: `${siteUrl}/de`,
+        },
+      },
+    },
+    // 🌐 HOME DE
+    {
+      url: `${siteUrl}/de`,
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 1,
       alternates: {
@@ -18,10 +48,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
 
-    // Categoría: Descubriendo el Amazonas
+    // 🌱 Categoría: Descubriendo el Amazonas (ES)
     {
-      url: `${siteUrl}/es/categories/descubriendo-el-amazonas`,
-      lastModified: new Date(),
+      url: `${siteUrl}/es/categorias/descubriendo-el-amazonas`,
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
       alternates: {
@@ -32,11 +62,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    // EN
+    {
+      url: `${siteUrl}/en/categories/discovering-the-amazon`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    // DE
+    {
+      url: `${siteUrl}/de/kategorien/amazonas-entdecken`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
 
-    // Categoría: Aventura selva adentro
+    // 🏕 Aventura Selva Adentro
     {
       url: `${siteUrl}/es/categorias/aventura-selva-adentro`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
       alternates: {
@@ -47,11 +91,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    {
+      url: `${siteUrl}/en/categories/jungle-adventure`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
 
-    // Categoría: Bushcraft y supervivencia
+    // 🔥 Bushcraft y Supervivencia
     {
       url: `${siteUrl}/es/categorias/bushcraft-supervivencia`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
       alternates: {
@@ -62,19 +118,71 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
-    // Ejemplo con "about"
+    {
+      url: `${siteUrl}/en/categories/bushcraft-survival`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/de/kategorien/bushcraft`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+
+    // 🪶 Ethno Travel
+    {
+      url: `${siteUrl}/es/categorias/ethno-travel`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+      alternates: {
+        languages: {
+          es: `${siteUrl}/es/categorias/ethno-travel`,
+          en: `${siteUrl}/en/categories/ethno-travel`,
+          de: `${siteUrl}/de/kategorien/ethno-travel`,
+        },
+      },
+    },
+    {
+      url: `${siteUrl}/en/categories/ethno-travel`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/de/kategorien/ethno-reisen`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+
+    // 📄 Sobre nosotros
     {
       url: `${siteUrl}/es/sobre-nosotros`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
       alternates: {
         languages: {
           es: `${siteUrl}/es/sobre-nosotros`,
           en: `${siteUrl}/en/about`,
-          de: `${siteUrl}/de/uber-uns`, 
+          de: `${siteUrl}/de/uber-uns`,
         },
       },
+    },
+    {
+      url: `${siteUrl}/en/about`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${siteUrl}/de/uber-uns`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
   ];
 
