@@ -5,7 +5,7 @@ export default function CategoriesCardEN() {
   return (
     <div
       id="categories"
-      className="relative w-full bg-fixed bg-center bg-cover"
+      className="relative w-full bg-fixed bg-center bg-cover overflow-hidden"
       style={{ backgroundImage: 'url("/pirarucu.jpeg")' }}
     >
       {/* Overlay */}
