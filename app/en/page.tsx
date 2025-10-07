@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 export default function HomeEN() {
   return (
-    <section>
+    <section className="overflow-hidden">
       <NavbarEN />
       <HeroEN />
       <AboutEN />

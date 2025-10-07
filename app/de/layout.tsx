@@ -49,8 +49,14 @@ export default function DELayout({ children }: { children: ReactNode }) {
         "@type": "ListItem",
         position: 7,
         name: "Ethno-travel",
-        item: `${siteUrl}/de/ethno-travel`,}
-   
+        item: `${siteUrl}/de/ethno-travel`,},
+
+    {
+        "@type": "ListItem",
+        position: 8,
+        name: "galerie",
+        item: `${siteUrl}/de/galerie`,},
+        
    
     ],
   };

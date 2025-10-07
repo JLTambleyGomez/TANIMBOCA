@@ -184,6 +184,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+ // galeria
+     {
+      url: `${siteUrl}/es/galeria`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: {
+        languages: {
+          es: `${siteUrl}/es/galeria`,
+          en: `${siteUrl}/en/gallery`,
+          de: `${siteUrl}/de/galerie`,
+        },
+      },
+    },
+    {
+      url: `${siteUrl}/en/gallery`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${siteUrl}/de/galerie`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 
   return urls;

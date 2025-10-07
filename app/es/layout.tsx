@@ -52,7 +52,12 @@ export default function ESLayout({ children }: { children: ReactNode }) {
         "@type": "ListItem",
         position: 7,
         name: "ethno-travel",
-        item: `${siteUrl}/es/ethno-travel`, }
+        item: `${siteUrl}/es/ethno-travel`, },
+          {
+        "@type": "ListItem",
+        position: 8,
+        name: "galeria",
+        item: `${siteUrl}/es/galeria`, }
     ],
   };
 

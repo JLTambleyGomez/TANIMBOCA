@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 export default function HomeDE() {
   return (
-    <section>
+    <section className="overflow-hidden">
         <NavbarDE />
       <HeroDE />
       <AboutDE />

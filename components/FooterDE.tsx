@@ -45,7 +45,7 @@ export default function FooterDE() {
           <h2 className="text-lg font-bold mb-2">Tanimboca</h2>
           <p className="text-sm">
             Dosel Tanimboca <br />
-            Carrera 10 No. 11-60 <br />
+            Calle 12# 10 – 97 Jesús victoria Regia <br />
             Leticia, Amazonas – Kolumbien
           </p>
         </div>
