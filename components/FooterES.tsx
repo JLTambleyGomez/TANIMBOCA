@@ -54,13 +54,11 @@ export default function FooterES() {
         <div>
           <h3 className="text-lg font-semibold mb-3">Contacto</h3>
           <ul className="space-y-2 text-sm">
-            <li className="flex items-center gap-2">
+           
+             <li className="flex items-center gap-2">
               <Phone size={16} aria-hidden />
-              <span>(57 8) 5927679</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <Phone size={16} aria-hidden />
-              <span>+57 3107917470 (Spanish) – +57 3102935009 (English)</span>
+              <span>+57 3107917470 (Spanish)</span>
+              <span> +57 3102935009 (English)</span>
             </li>
             <li className="flex items-center gap-2">
               <Mail size={16} aria-hidden />
