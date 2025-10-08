@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import NavbarES from "@/components/NavbarES";
 import FooterES from "@/components/FooterES";
+import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Ethno Travel | Reserva Tanimboca",
@@ -12,14 +13,15 @@ export const metadata: Metadata = {
     title: "Ethno Travel | Turismo Cultural Amazónico",
     description:
       "Participa en intercambios culturales con comunidades indígenas y descubre su cosmovisión en la triple frontera (Colombia, Brasil y Perú).",
-    url: "/es/categories/ethno-travel",
+      url: `${siteUrl}/es/categorias/ethno-travel`,
     locale: "es_CO",
   },
   alternates: {
-    canonical: "/es/categories/ethno-travel",
+      canonical: `${siteUrl}/es/categorias/ethno-travel`,
     languages: {
-      en: "/en/categories/ethno-travel",
-      de: "/de/kategorien/ethno-reisen",
+        en: `${siteUrl}/en/categories/ethno-travel`,
+        de: `${siteUrl}/de/kategorien/ethno-travel`,
+        es: `${siteUrl}/es/categorias/ethno-travel`,
     },
   },
 };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import NavbarDE from "@/components/NavbarDE";
 import FooterDE from "@/components/FooterDE";
+import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Bushcraft & Überleben | Tanimboca Reservat",
@@ -11,14 +12,15 @@ export const metadata: Metadata = {
     title: "Bushcraft & Überleben | Abenteuer im Amazonas",
     description:
       "Authentisches Amazonas-Erlebnis: Camping, Bushcraft, Feuertechniken, Angeln und Expeditionen im Naturreservat Tanimboca.",
-    url: "/de/kategorien/bushcraft-überleben",
-    locale: "de_DE",
+      url: `${siteUrl}/de/kategorien/bushcraft`,
+      locale: "de_DE",
   },
   alternates: {
-    canonical: "/de/kategorien/bushcraft",
+    canonical: `${siteUrl}/de/kategorien/bushcraft`,
     languages: {
-      es: "/es/categories/bushcraft-supervivencia",
-      en: "/en/categories/bushcraft-survival",
+      es: `${siteUrl}/es/categorias/bushcraft-supervivencia`,
+      en: `${siteUrl}/en/categories/bushcraft-survival`,
+      de: `${siteUrl}/de/kategorien/bushcraft`,
     },
   },
 };

@@ -1,12 +1,12 @@
 // app/de/page.tsx
 import type { Metadata } from "next";
-import { siteUrl } from "@/lib/seo";
 import HeroDE from "@/components/HeroDE";
 import NavbarDE from "@/components/NavbarDE";
 import AboutDE from "@/components/AboutDE";
 import CategoriesCardDE from "@/components/CategoriesCardDE";
 import CallToActionDE from "@/components/CallToActionDE";
 import FooterDE from "@/components/FooterDE";
+import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Abenteuer im Amazonas Regenwald | Tanimboca Naturreservat",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     title: "Tanimboca | Abenteuer im kolumbianischen Amazonas",
     description:
       "Entdecke den kolumbianischen Amazonas: Canopy, Kajak, Dschungel-Expeditionen, indigene Traditionen, Gastronomie und individuell angepasste Öko-Reisen.",
-    url: "/de",
-    locale: "de_DE",
+      url: `${siteUrl}/de`,
+      locale: "de_DE",
   },
   alternates: {
     canonical:  `${siteUrl}/de`,

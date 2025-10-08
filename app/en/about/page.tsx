@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import NavbarEN from "@/components/NavbarEN";
 import FooterES from "@/components/FooterES";
+import { siteUrl } from "@/lib/seo";
+
 export const metadata: Metadata = {
   title: "About Us | Tanimboca Amazon",
   description:
@@ -10,12 +12,12 @@ export const metadata: Metadata = {
     title: "Tanimboca | About Us",
     description:
       "Learn about Tanimboca, our history, mission, and unique ecotourism experiences in the Colombian Amazon.",
-    url: "/en/about",
+      url: `${siteUrl}/en/about`,
     locale: "en_US",
   },
   alternates: {
-    canonical: "/en/about",
-    languages: { es: "/es/about", de: "/de/about" },
+      canonical: `${siteUrl}/en/about`,
+    languages: { es: `${siteUrl}/es/sobre-nosotros`, de: `${siteUrl}/de/uber-uns`, en: `${siteUrl}/en/about`  },
   },
 };
 

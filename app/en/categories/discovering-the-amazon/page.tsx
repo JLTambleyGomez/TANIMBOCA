@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import NavbarEN from "@/components/NavbarEN";
 import FooterEN from "@/components/FooterEN";
+import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
     title: "Discovering the Amazon | Ecotourism Plans in Tanimboca",
@@ -11,14 +12,15 @@ export const metadata: Metadata = {
         title: "Discovering the Amazon | Unique Experiences in Tanimboca",
         description:
             "Experience the Amazon rainforest with authentic adventures: canopy, kayaking, hiking, indigenous culture, and more at Tanimboca Natural Reserve, Leticia, Amazonas.",
-        url: "/en/categories/discovering-the-amazon",
+            url: `${siteUrl}/en/categories/discovering-the-amazon`,
         locale: "en_US",
     },
     alternates: {
-        canonical: "/en/categories/discovering-the-amazon",
+            canonical: `${siteUrl}/en/categories/discovering-the-amazon`,
         languages: {
-            es: "/es/categories/descubriendo-el-amazonas",
-            de: "/de/categories/amazonas-entdecken",
+            es: `${siteUrl}/es/categorias/descubriendo-el-amazonas`,
+            de: `${siteUrl}/de/kategorien/amazonas-entdecken`,
+            en: `${siteUrl}/en/categories/discovering-the-amazon`,
         },
     },
 };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import NavbarDE from "@/components/NavbarDE";
 import FooterDE from "@/components/FooterDE";
+import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Nachhaltigkeitspolitik | Reserva Tanimboca",
@@ -11,14 +12,16 @@ export const metadata: Metadata = {
     title: "Nachhaltigkeitspolitik | Reserva Tanimboca",
     description:
       "Unser Engagement für nachhaltigen Tourismus im Amazonas: Wasser, Energie, Abfallmanagement, soziale Verantwortung und Respekt gegenüber indigenen Gemeinschaften.",
-    url: "/de/nachhaltigkeit",
+   
+      url: `${siteUrl}/de/nachhaltigkeit`,
     locale: "de_DE",
   },
   alternates: {
-    canonical: "/de/nachhaltigkeit",
+      canonical: `${siteUrl}/de/nachhaltigkeit`,
     languages: {
-      es: "/es/sostenibilidad",
-      en: "/en/sustainability",
+        es: `${siteUrl}/es/sostenibilidad`,
+        en: `${siteUrl}/en/sustainability`,
+        de: `${siteUrl}/de/nachhaltigkeit`,
     },
   },
 };

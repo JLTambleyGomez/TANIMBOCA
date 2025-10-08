@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import NavbarEN from "@/components/NavbarEN";
 import FooterEN from "@/components/FooterEN";
-
+import { siteUrl } from "@/lib/seo";
 export const metadata: Metadata = {
     title: "Jungle Adventure | Ecotourism in Tanimboca",
     description:
@@ -11,14 +11,15 @@ export const metadata: Metadata = {
         title: "Jungle Adventure | Ecotourism in Tanimboca",
         description:
             "Explore the Amazon rainforest in depth: trekking, kayaking, camping, and indigenous culture. 6 to 8-day plans in the Tanimboca Nature Reserve, Leticia, Amazonas.",
-        url: "/en/categories/jungle-adventure",
-        locale: "en_US",
+            url: `${siteUrl}/en/categories/jungle-adventure`,
+            locale: "en_US",
     },
     alternates: {
-        canonical: "/en/categories/jungle-adventure",
+            canonical: `${siteUrl}/en/categories/jungle-adventure`,
         languages: {
-            es: "/es/categories/aventura-selva-adentro",
-            de: "/de/kategorien/dschungel-abenteuer",
+                es: `${siteUrl}/es/categorias/aventura-selva-adentro`,
+                de: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
+                en: `${siteUrl}/en/categories/jungle-adventure`,
         },
     },
 };

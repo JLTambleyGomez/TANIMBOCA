@@ -22,7 +22,7 @@ export default function ESLayout({ children }: { children: ReactNode }) {
         "@type": "ListItem",
         position: 2,
         name: "Sobre Nosotros",
-        item: `${siteUrl}/es/about`,
+        item: `${siteUrl}/es/sobre-nosotros`,
       },
       {
         "@type": "ListItem",

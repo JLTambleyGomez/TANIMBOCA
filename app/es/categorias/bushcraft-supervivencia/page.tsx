@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import NavbarES from "@/components/NavbarES";
 import FooterES from "@/components/FooterES";
+import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
     title: "Bushcraft y Supervivencia | Reserva Tanimboca",
@@ -11,14 +12,15 @@ export const metadata: Metadata = {
         title: "Bushcraft y Supervivencia | Ecoturismo en el Amazonas",
         description:
             "Vive el Amazonas en su máxima autenticidad: campamentos, bushcraft, pesca artesanal y expediciones de supervivencia en la Reserva Natural Tanimboca.",
-        url: "/es/categories/bushcraft-supervivencia",
+            url: `${siteUrl}/es/categorias/bushcraft-supervivencia`,
         locale: "es_CO",
     },
     alternates: {
-        canonical: "/es/categories/bushcraft-supervivencia",
+            canonical: `${siteUrl}/es/categorias/bushcraft-supervivencia`,
         languages: {
-            en: "/en/categories/bushcraft-survival",
-            de: "/de/kategorien/bushcraft",
+                en: `${siteUrl}/en/categories/bushcraft-survival`,
+                de: `${siteUrl}/de/kategorien/bushcraft`,
+                es: `${siteUrl}/es/categorias/bushcraft-supervivencia`,
         },
     },
 };

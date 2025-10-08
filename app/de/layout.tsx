@@ -21,7 +21,7 @@ export default function DELayout({ children }: { children: ReactNode }) {
         "@type": "ListItem",
         position: 2,
         name: "Über Uns",
-        item: `${siteUrl}/de/about`,
+        item: `${siteUrl}/de/uber-uns`,
       },
       {
         "@type": "ListItem",

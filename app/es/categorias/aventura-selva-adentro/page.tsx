@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import NavbarES from "@/components/NavbarES";
 import FooterES from "@/components/FooterES";
+import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
     title: "Aventura Selva Adentro | Ecoturismo en Tanimboca",
@@ -11,14 +12,15 @@ export const metadata: Metadata = {
         title: "Aventura Selva Adentro | Ecoturismo en Tanimboca",
         description:
             "Explora la selva amazónica en profundidad: caminatas, kayak, noches en campamento y cultura indígena. Planes de 6 a 8 días en la Reserva Natural Tanimboca, Leticia, Amazonas.",
-        url: "/es/categories/aventura-selva-adentro",
+            url: `${siteUrl}/es/categorias/aventura-selva-adentro`,
         locale: "es_CO",
     },
     alternates: {
-        canonical: "/es/categories/aventura-selva-adentro",
+            canonical: `${siteUrl}/es/categorias/aventura-selva-adentro`,
         languages: {
-            en: "/en/categories/jungle-adventure",
-            de: "/de/kategorien/dschungel-abenteuer",
+                en: `${siteUrl}/en/categories/jungle-adventure`,
+                de: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
+                es: `${siteUrl}/es/categorias/aventura-selva-adentro`
         },
     },
 };

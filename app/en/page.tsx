@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Tanimboca | Amazon Rainforest Adventures in Colombia",
     description:
       "Experience the Colombian Amazon like never before: canopy, kayaking, jungle expeditions, indigenous culture, gastronomy, and fully personalized eco-adventures.",
-    url: "/en",
+      url: `${siteUrl}/en`,
     locale: "en_US",
   },
   alternates: {

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import NavbarES from "@/components/NavbarES";
 import FooterES from "@/components/FooterES";
+import { siteUrl } from "@/lib/seo";
+
 
 export const metadata: Metadata = {
   title: "Sobre Nosotros | Tanimboca Amazonas",
@@ -11,13 +13,16 @@ export const metadata: Metadata = {
     title: "Tanimboca | Sobre Nosotros",
     description:
       "Conoce la historia de Tanimboca y nuestras experiencias únicas de ecoturismo, aventura y cultura en el Amazonas colombiano.",
-    url: "/es/about",
+    url: `${siteUrl}/es/sobre-nosotros`,
     locale: "es_CO",
   },
-  alternates: {
-    canonical: "/es/about",
-    languages: { en: "/en/about", de: "/de/about" },
-  },
+   alternates: {
+    canonical: `${siteUrl}/es/sobre-nosotros`,
+    languages: {
+      es: `${siteUrl}/es/sobre-nosotros`,
+      en: `${siteUrl}/en/about`,
+      de: `${siteUrl}/de/uber-uns`,
+    },},
 };
 
 export default function AboutPageES() {

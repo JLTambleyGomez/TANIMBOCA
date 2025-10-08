@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import NavbarDE from "@/components/NavbarDE";
 import FooterDE from "@/components/FooterDE";
+import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
     title: "Dschungel-Abenteuer | Ökotourismus in Tanimboca",
@@ -11,14 +12,15 @@ export const metadata: Metadata = {
         title: "Dschungel-Abenteuer | Ökotourismus in Tanimboca",
         description:
             "Entdecke den Amazonas-Regenwald hautnah: Wanderungen, Kajakfahrten, Camping und indigene Kultur. 6- bis 8-tägige Programme im Naturreservat Tanimboca, Leticia, Amazonas.",
-        url: "/de/kategorien/dschungel-abenteuer",
-        locale: "de_DE",
+            url: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
+            locale: "de_DE",
     },
     alternates: {
-        canonical: "/de/kategorien/dschungel-abenteuer",
+        canonical: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
         languages: {
-            es: "/es/categories/aventura-selva-adentro",
-            en: "/en/categories/jungle-adventure",
+              es: `${siteUrl}/es/categorias/aventura-selva-adentro`,
+            en: `${siteUrl}/en/categories/jungle-adventure`,
+            de: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
         },
     },
 };

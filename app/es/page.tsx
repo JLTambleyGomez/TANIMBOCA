@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         title: "Tanimboca | Aventuras en el Amazonas colombiano",
         description:
             "Vive el Amazonas colombiano como nunca: canopy, kayak, excursiones en la selva, cultura indígena, gastronomía amazónica y viajes totalmente personalizados.",
-        url: "/es",
+            url: `${siteUrl}/es`,
         locale: "es_CO",
     },
     alternates: {

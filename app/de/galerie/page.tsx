@@ -3,20 +3,22 @@ import { fetchGalleryImages } from "@/lib/cloudinary";
 import LightboxGallery from "@/components/LightboxGallery";
 import NavbarDE from "@/components/NavbarDE";
 import FooterDE from "@/components/FooterDE";
+import { siteUrl } from "@/lib/seo";
 export const metadata = {
   title: "Ethno Travel Galerie | Reserva Tanimboca",
   description: "Entdecke authentische Bilder kultureller Erfahrungen im Amazonas.",
   openGraph: {
     title: "Ethno Travel Galerie | Reserva Tanimboca",
     description: "Entdecke authentische Bilder kultureller Erfahrungen im Amazonas.",
-    url: "/de/galerie",
+    url: `${siteUrl}/de/galerie`,
     locale: "de_DE",
   },
   alternates: {
-    canonical: "/de/galerie",
+    canonical: `${siteUrl}/de/galerie`,
     languages: {
-      es: "/es/galeria",
-      en: "/en/gallery",
+      de: `${siteUrl}/de/galerie`,
+      es: `${siteUrl}/es/galeria`,
+      en: `${siteUrl}/en/gallery`,
     },
   },
 };
