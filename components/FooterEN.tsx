@@ -45,7 +45,7 @@ export default function FooterEN() {
           <h2 className="text-lg font-bold mb-2">Tanimboca</h2>
           <p className="text-sm">
             Dosel Tanimboca <br />
-            Calle 12# 10 – 97 Jesús victoria Regia <br />
+            Calle 12# 10 – 97 <br />
             Leticia, Amazonas – Colombia
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function FooterEN() {
             </li>
             <li className="flex items-center gap-2">
               <Phone size={16} aria-hidden />
-              <span>3107917470 – 3212079909 – 3112043532</span>
+              <span>+57 3107917470 (Spanish) – +57 3102935009 (English)</span>
             </li>
             <li className="flex items-center gap-2">
               <Mail size={16} aria-hidden />
