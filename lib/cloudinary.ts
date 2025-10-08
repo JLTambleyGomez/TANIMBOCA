@@ -2,18 +2,33 @@ import { v2 as cloudinary } from "cloudinary";
 
 cloudinary.config({ secure: true });
 
-export async function fetchGalleryImages(prefix = "") {
+type CloudinaryResource = {
+  public_id: string;
+  secure_url: string;
+  display_name?: string;
+  width: number;
+  height: number;
+};
+
+export type GalleryImage = {
+  id: string;
+  url: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
+export async function fetchGalleryImages(prefix = ""): Promise<GalleryImage[]> {
   try {
     const result = await cloudinary.api.resources({
       type: "upload",
-      prefix,         // opcional: puedes filtrar por carpeta si quieres
+      prefix,
       max_results: 50,
     });
 
-    // 🧠 transformamos la respuesta de Cloudinary
-    return result.resources.map((r: any) => ({
-      id: r.public_id,                 // 👈 único
-      url: r.secure_url,               // 👈 HTTPS siempre
+    return (result.resources as CloudinaryResource[]).map((r) => ({
+      id: r.public_id,
+      url: r.secure_url,
       alt: r.display_name || r.public_id,
       width: r.width,
       height: r.height,
