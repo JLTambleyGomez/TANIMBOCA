@@ -64,6 +64,8 @@ export default function DELayout({ children }: { children: ReactNode }) {
   return (
     <html lang="de">
       <head>
+          <meta httpEquiv="Content-Language" content="de" />
+
         <script
           id="breadcrumb-schema-de"
           type="application/ld+json"

@@ -68,6 +68,8 @@ export default function ENLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+          <meta httpEquiv="Content-Language" content="en" />
+
         <script
           id="breadcrumb-schema-en"
           type="application/ld+json"

@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import Script from "next/script";
 import { siteUrl } from "@/lib/seo";
 import type { ReactNode } from "react";
 
@@ -30,7 +29,7 @@ export default function ESLayout({ children }: { children: ReactNode }) {
         name: "Descubriendo el Amazonas",
         item: `${siteUrl}/es/categorias/descubriendo-el-amazonas`,
       },
-      { 
+      {
         "@type": "ListItem",
         position: 4,
         name: "Aventura selva adentro",
@@ -41,36 +40,42 @@ export default function ESLayout({ children }: { children: ReactNode }) {
         position: 5,
         name: "Bushcraft y Supervivencia",
         item: `${siteUrl}/es/categorias/bushcraft-supervivencia`,
-
       },
       {
         "@type": "ListItem",
         position: 6,
         name: "Sostenibilidad",
-        item: `${siteUrl}/es/sostenibilidad`, },
-              {
+        item: `${siteUrl}/es/sostenibilidad`,
+      },
+      {
         "@type": "ListItem",
         position: 7,
-        name: "ethno-travel",
-        item: `${siteUrl}/es/ethno-travel`, },
-          {
+        name: "Ethno-travel",
+        item: `${siteUrl}/es/ethno-travel`,
+      },
+      {
         "@type": "ListItem",
         position: 8,
-        name: "galeria",
-        item: `${siteUrl}/es/galeria`, }
+        name: "Galería",
+        item: `${siteUrl}/es/galeria`,
+      },
     ],
   };
 
   return (
     <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
-        <Script
+      <head>
+        <meta httpEquiv="Content-Language" content="es" />
+
+        {/* Breadcrumb Schema en SSR, igual que EN/DE */}
+        <script
           id="breadcrumb-schema-es"
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {children}
       </body>
     </html>
   );
