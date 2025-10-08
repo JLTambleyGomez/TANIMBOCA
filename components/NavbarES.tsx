@@ -68,7 +68,7 @@ export default function NavbarES() {
           </Link>
         </li>
         <li>
-          <Link href="/es/gallery" className="hover:text-green-200">
+          <Link href="/es/galeria" className="hover:text-green-200">
             Galería
           </Link>
         </li>
@@ -159,7 +159,7 @@ export default function NavbarES() {
             </Link>
           </li>
           <li>
-            <Link href="/es/gallery" onClick={() => setMenuOpen(false)}>
+            <Link href="/es/galeria" onClick={() => setMenuOpen(false)}>
               Galería
             </Link>
           </li>

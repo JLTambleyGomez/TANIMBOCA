@@ -1,6 +1,8 @@
 // tanimboca/app/es/galeria/page.tsx
 import { fetchGalleryImages } from "@/lib/cloudinary";
 import LightboxGallery from "@/components/LightboxGallery";
+import NavbarES from "@/components/NavbarES";
+import FooterES from "@/components/FooterES";
 
 export const metadata = {
   title: "Galería Ethno Travel | Reserva Tanimboca",
@@ -24,9 +26,11 @@ export default async function GalleryPageES() {
   const images = await fetchGalleryImages();
 
   return (
+    <>
+          <NavbarES />
     <main className="pt-32 px-6 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold text-green-200 mb-8 text-center">
-        📸 Galería Ethno Travel
+        📸 Galería Tanimboca
       </h1>
 
       {images.length === 0 ? (
@@ -35,5 +39,8 @@ export default async function GalleryPageES() {
         <LightboxGallery images={images} />
       )}
     </main>
+      <FooterES />
+        </>
+
   );
 }

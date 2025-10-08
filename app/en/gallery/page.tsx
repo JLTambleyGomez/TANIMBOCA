@@ -1,7 +1,8 @@
 // app/en/gallery/page.tsx
 import { fetchGalleryImages } from "@/lib/cloudinary";
 import LightboxGallery from "@/components/LightboxGallery";
-
+import NavbarEN from "@/components/NavbarEN";
+import FooterEN from "@/components/FooterEN";
 export const metadata = {
   title: "Ethno Travel Gallery | Tanimboca Reserve",
   description: "Explore authentic images of cultural experiences in the Amazon.",
@@ -23,15 +24,20 @@ export const metadata = {
 export default async function GalleryPageEN() {
   const images = await fetchGalleryImages();
   return (
+    <>
+          <NavbarEN />
+
     <main className="pt-32 px-6 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold text-green-200 mb-8 text-center">
-        📸 Ethno Travel Gallery
+        📸 Tanimboca Gallery
       </h1>
       {images.length === 0 ? (
         <p className="text-center text-white">No images found.</p>
       ) : (
         <LightboxGallery images={images} />
       )}
-    </main>
+    </main>       <FooterEN />
+   </>
+
   );
 }

@@ -59,7 +59,7 @@ export default function NavbarDE() {
           <Link href="/de/nachhaltigkeit" className="hover:text-green-200">Nachhaltigkeit</Link>
         </li>
         <li>
-          <Link href="/de/gallery" className="hover:text-green-200">Galerie</Link>
+          <Link href="/de/galerie" className="hover:text-green-200">Galerie</Link>
         </li>
         <li>
           <a href="/de#footer" className="hover:text-green-200">Kontakt</a>
@@ -133,7 +133,7 @@ export default function NavbarDE() {
           <li><a href="/de#about" onClick={() => setMenuOpen(false)}>Über uns</a></li>
           <li><a href="/de#categories" onClick={() => setMenuOpen(false)}>Abenteuer</a></li>
           <li><Link href="/de/nachhaltigkeit" onClick={() => setMenuOpen(false)}>Nachhaltigkeit</Link></li>
-          <li><Link href="/de/gallery" onClick={() => setMenuOpen(false)}>Galerie</Link></li>
+          <li><Link href="/de/galerie" onClick={() => setMenuOpen(false)}>Galerie</Link></li>
           <li><a href="/de#footer" onClick={() => setMenuOpen(false)}>Kontakt</a></li>
           <li>
             <Link
