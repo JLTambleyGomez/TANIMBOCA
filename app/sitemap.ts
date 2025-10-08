@@ -47,7 +47,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
-
+    // 🌍 Sostenibilidad
+    {
+      url: `${siteUrl}/es/sostenibilidad`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          es: `${siteUrl}/es/sostenibilidad`,
+          en: `${siteUrl}/en/sustainability`,
+          de: `${siteUrl}/de/nachhaltigkeit`,
+        },
+      },
+    },
+    {
+      url: `${siteUrl}/en/sustainability`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/de/nachhaltigkeit`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     // 🌱 Categoría: Descubriendo el Amazonas (ES)
     {
       url: `${siteUrl}/es/categorias/descubriendo-el-amazonas`,
@@ -184,8 +209,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
- // galeria
-     {
+    // galeria
+    {
       url: `${siteUrl}/es/galeria`,
       lastModified: now,
       changeFrequency: "monthly",
