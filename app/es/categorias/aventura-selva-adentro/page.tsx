@@ -3,6 +3,7 @@ import Image from "next/image";
 import NavbarES from "@/components/NavbarES";
 import FooterES from "@/components/FooterES";
 import { siteUrl } from "@/lib/seo";
+import { makeAlternates } from "@/lib/hreflangRoutes";
 
 export const metadata: Metadata = {
     title: "Aventura Selva Adentro | Ecoturismo en Tanimboca",
@@ -15,14 +16,15 @@ export const metadata: Metadata = {
             url: `${siteUrl}/es/categorias/aventura-selva-adentro`,
         locale: "es_CO",
     },
-    alternates: {
-            canonical: `${siteUrl}/es/categorias/aventura-selva-adentro`,
-        languages: {
-                en: `${siteUrl}/en/categories/jungle-adventure`,
-                de: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
-                es: `${siteUrl}/es/categorias/aventura-selva-adentro`
-        },
-    },
+    alternates: makeAlternates("categorias/aventura-selva-adentro", "es"),
+    // alternates: {
+    //         canonical: `${siteUrl}/es/categorias/aventura-selva-adentro`,
+    //     languages: {
+    //             en: `${siteUrl}/en/categories/jungle-adventure`,
+    //             de: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
+    //             es: `${siteUrl}/es/categorias/aventura-selva-adentro`
+    //     },
+    // },
 };
 
 export default function AventuraSelvaAdentroPageES() {

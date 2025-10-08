@@ -4,6 +4,7 @@ import Image from "next/image";
 import NavbarES from "@/components/NavbarES";
 import FooterES from "@/components/FooterES";
 import { siteUrl } from "@/lib/seo";
+import { makeAlternates } from "@/lib/hreflangRoutes";
 
 export const metadata: Metadata = {
   title: "Ethno Travel | Reserva Tanimboca",
@@ -16,14 +17,15 @@ export const metadata: Metadata = {
       url: `${siteUrl}/es/categorias/ethno-travel`,
     locale: "es_CO",
   },
-  alternates: {
-      canonical: `${siteUrl}/es/categorias/ethno-travel`,
-    languages: {
-        en: `${siteUrl}/en/categories/ethno-travel`,
-        de: `${siteUrl}/de/kategorien/ethno-travel`,
-        es: `${siteUrl}/es/categorias/ethno-travel`,
-    },
-  },
+  alternates: makeAlternates("categorias/ethno-travel", "es"),
+  // alternates: {
+  //     canonical: `${siteUrl}/es/categorias/ethno-travel`,
+  //   languages: {
+  //       en: `${siteUrl}/en/categories/ethno-travel`,
+  //       de: `${siteUrl}/de/kategorien/ethno-travel`,
+  //       es: `${siteUrl}/es/categorias/ethno-travel`,
+  //   },
+  // },
 };
 
 export default function EthnoTravelPageES() {

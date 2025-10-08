@@ -3,6 +3,7 @@ import Image from "next/image";
 import NavbarEN from "@/components/NavbarEN";
 import FooterEN from "@/components/FooterEN";
 import { siteUrl } from "@/lib/seo";
+import { makeAlternates } from "@/lib/hreflangRoutes";
 
 export const metadata: Metadata = {
     title: "Discovering the Amazon | Ecotourism Plans in Tanimboca",
@@ -15,14 +16,15 @@ export const metadata: Metadata = {
             url: `${siteUrl}/en/categories/discovering-the-amazon`,
         locale: "en_US",
     },
-    alternates: {
-            canonical: `${siteUrl}/en/categories/discovering-the-amazon`,
-        languages: {
-            es: `${siteUrl}/es/categorias/descubriendo-el-amazonas`,
-            de: `${siteUrl}/de/kategorien/amazonas-entdecken`,
-            en: `${siteUrl}/en/categories/discovering-the-amazon`,
-        },
-    },
+    alternates: makeAlternates("categorias/descubriendo-el-amazonas", "en"),
+    // alternates: {
+    //         canonical: `${siteUrl}/en/categories/discovering-the-amazon`,
+    //     languages: {
+    //         es: `${siteUrl}/es/categorias/descubriendo-el-amazonas`,
+    //         de: `${siteUrl}/de/kategorien/amazonas-entdecken`,
+    //         en: `${siteUrl}/en/categories/discovering-the-amazon`,
+    //     },
+    // },
 };
 
 export default function DiscoveringAmazonPageEN() {

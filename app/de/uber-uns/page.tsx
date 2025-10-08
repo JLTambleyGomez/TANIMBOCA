@@ -3,6 +3,8 @@ import Image from "next/image";
 import NavbarDE from "@/components/NavbarDE";
 import FooterES from "@/components/FooterES";
 import { siteUrl } from "@/lib/seo";
+import { makeAlternates } from "@/lib/hreflangRoutes";
+
 
 export const metadata: Metadata = {
   title: "Über Uns | Tanimboca Amazonas",
@@ -15,10 +17,11 @@ export const metadata: Metadata = {
     url: `${siteUrl}/de/uber-uns`,
     locale: "de_DE",
   },
-  alternates: {
-    canonical: `${siteUrl}/de/uber-uns`,
-    languages: { en: `${siteUrl}/en/about`, es: `${siteUrl}/es/sobre-nosotros`, de: `${siteUrl}/de/uber-uns` },
-  },
+  // alternates: {
+  //   canonical: `${siteUrl}/de/uber-uns`,
+  //   languages: { en: `${siteUrl}/en/about`, es: `${siteUrl}/es/sobre-nosotros`, de: `${siteUrl}/de/uber-uns` },
+  // },
+  alternates: makeAlternates("sobre-nosotros", "de"),
 };
 
 export default function AboutPageDE() {

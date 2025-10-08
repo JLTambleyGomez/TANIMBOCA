@@ -3,6 +3,7 @@ import Image from "next/image";
 import NavbarDE from "@/components/NavbarDE";
 import FooterDE from "@/components/FooterDE";
 import { siteUrl } from "@/lib/seo";
+import { makeAlternates } from "@/lib/hreflangRoutes";
 
 export const metadata: Metadata = {
   title: "Amazonas entdecken | Ökotourismus-Pläne in Tanimboca",
@@ -15,14 +16,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}/de/categories/amazonas-entdecken`,
     locale: "de_DE",
   },
-  alternates: {
-    canonical: `${siteUrl}/de/kategorien/amazonas-entdecken`,
-    languages: {
-      es: `${siteUrl}/es/categorias/descubriendo-el-amazonas`,
-      en: `${siteUrl}/en/categories/discovering-the-amazon`,
-      de: `${siteUrl}/de/kategorien/amazonas-entdecken`,
-    },
-  },
+  alternates: makeAlternates("categorias/descubriendo-el-amazonas", "de"),
 };
 
 export default function AmazonasEntdeckenPageDE() {

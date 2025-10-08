@@ -3,6 +3,7 @@ import Image from "next/image";
 import NavbarDE from "@/components/NavbarDE";
 import FooterDE from "@/components/FooterDE";
 import { siteUrl } from "@/lib/seo";
+import { makeAlternates } from "@/lib/hreflangRoutes";
 
 export const metadata: Metadata = {
   title: "Nachhaltigkeitspolitik | Reserva Tanimboca",
@@ -16,14 +17,15 @@ export const metadata: Metadata = {
       url: `${siteUrl}/de/nachhaltigkeit`,
     locale: "de_DE",
   },
-  alternates: {
-      canonical: `${siteUrl}/de/nachhaltigkeit`,
-    languages: {
-        es: `${siteUrl}/es/sostenibilidad`,
-        en: `${siteUrl}/en/sustainability`,
-        de: `${siteUrl}/de/nachhaltigkeit`,
-    },
-  },
+  // alternates: {
+  //     canonical: `${siteUrl}/de/nachhaltigkeit`,
+  //   languages: {
+  //       es: `${siteUrl}/es/sostenibilidad`,
+  //       en: `${siteUrl}/en/sustainability`,
+  //       de: `${siteUrl}/de/nachhaltigkeit`,
+  //   },
+  // },
+  alternates: makeAlternates("sostenibilidad", "de"),
 };
 
 export default function SustainabilityDE() {

@@ -7,6 +7,7 @@ import AboutES from "@/components/AboutES";
 import CategoriesCardES from "@/components/CategoriesCardES";
 import CallToActionES from "@/components/CallToActionES";
 import FooterES from "@/components/FooterES";
+import { makeAlternates } from "@/lib/hreflangRoutes";
 
 export const metadata: Metadata = {
     title: "Aventuras en la Selva Amazónica | Reserva Natural Tanimboca",
@@ -32,13 +33,14 @@ export const metadata: Metadata = {
             url: `${siteUrl}/es`,
         locale: "es_CO",
     },
-    alternates: {
-        canonical: `${siteUrl}/es`,
-        languages: {
-            en: `${siteUrl}/en`,
-            de: `${siteUrl}/de`,
-        },
-    },
+    alternates: makeAlternates("home", "es"),
+    // alternates: {
+    //     canonical: `${siteUrl}/es`,
+    //     languages: {
+    //         en: `${siteUrl}/en`,
+    //         de: `${siteUrl}/de`,
+    //     },
+    // },
 };
 
 export default function HomeES() {

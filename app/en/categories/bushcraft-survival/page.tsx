@@ -3,6 +3,8 @@ import Image from "next/image";
 import NavbarEN from "@/components/NavbarEN";
 import FooterEN from "@/components/FooterEN";
 import { siteUrl } from "@/lib/seo";
+import { makeAlternates } from "@/lib/hreflangRoutes";
+
 export const metadata: Metadata = {
     title: "Bushcraft & Survival | Tanimboca Reserve",
     description:
@@ -14,14 +16,15 @@ export const metadata: Metadata = {
         url: `${siteUrl}/en/categories/bushcraft-survival`,
         locale: "en_US",
     },
-    alternates: {
-        canonical: `${siteUrl}/en/categories/bushcraft-survival`,
-        languages: {
-            es: `${siteUrl}/es/categorias/bushcraft-supervivencia`,
-            de: `${siteUrl}/de/kategorien/bushcraft`,
-            en: `${siteUrl}/en/categories/bushcraft-survival`,
-        },
-    },
+    alternates: makeAlternates("categorias/bushcraft-supervivencia", "en"),
+    // alternates: {
+    //     canonical: `${siteUrl}/en/categories/bushcraft-survival`,
+    //     languages: {
+    //         es: `${siteUrl}/es/categorias/bushcraft-supervivencia`,
+    //         de: `${siteUrl}/de/kategorien/bushcraft`,
+    //         en: `${siteUrl}/en/categories/bushcraft-survival`,
+    //     },
+    // },
 };
 
 export default function BushcraftPageEN() {

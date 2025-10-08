@@ -7,6 +7,8 @@ import CategoriesCardDE from "@/components/CategoriesCardDE";
 import CallToActionDE from "@/components/CallToActionDE";
 import FooterDE from "@/components/FooterDE";
 import { siteUrl } from "@/lib/seo";
+import { makeAlternates } from "@/lib/hreflangRoutes";
+
 
 export const metadata: Metadata = {
   title: "Abenteuer im Amazonas Regenwald | Tanimboca Naturreservat",
@@ -32,13 +34,14 @@ export const metadata: Metadata = {
       url: `${siteUrl}/de`,
       locale: "de_DE",
   },
-  alternates: {
-    canonical:  `${siteUrl}/de`,
-    languages: {
-      es:  `${siteUrl}/es`,
-      en: `${siteUrl}/en`,
-    },
-  },
+  alternates: makeAlternates("home", "de"),
+  // alternates: {
+  //   canonical:  `${siteUrl}/de`,
+  //   languages: {
+  //     es:  `${siteUrl}/es`,
+  //     en: `${siteUrl}/en`,
+  //   },
+  // },
 };
 
 export default function HomeDE() {

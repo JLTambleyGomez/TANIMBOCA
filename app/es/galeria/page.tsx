@@ -4,7 +4,7 @@ import LightboxGallery from "@/components/LightboxGallery";
 import NavbarES from "@/components/NavbarES";
 import FooterES from "@/components/FooterES";
 import { siteUrl } from "@/lib/seo";
-
+import { makeAlternates } from "@/lib/hreflangRoutes";
 export const metadata = {
   title: "Galería Ethno Travel | Reserva Tanimboca",
   description: "Explora imágenes auténticas de experiencias culturales en el Amazonas.",
@@ -14,14 +14,15 @@ export const metadata = {
       url: `${siteUrl}/es/galeria`,
     locale: "es_CO",
   },
-  alternates: {
-      canonical: `${siteUrl}/es/galeria`,
-    languages: {
-        es: `${siteUrl}/es/galeria`,
-        en: `${siteUrl}/en/gallery`,
-        de: `${siteUrl}/de/galerie`,
-    },
-  },
+  alternates: makeAlternates("galeria", "es"),
+  // alternates: {
+  //     canonical: `${siteUrl}/es/galeria`,
+  //   languages: {
+  //       es: `${siteUrl}/es/galeria`,
+  //       en: `${siteUrl}/en/gallery`,
+  //       de: `${siteUrl}/de/galerie`,
+  //   },
+  // },
 };
 
 export default async function GalleryPageES() {

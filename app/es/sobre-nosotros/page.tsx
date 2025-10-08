@@ -3,6 +3,8 @@ import Image from "next/image";
 import NavbarES from "@/components/NavbarES";
 import FooterES from "@/components/FooterES";
 import { siteUrl } from "@/lib/seo";
+import { makeAlternates } from "@/lib/hreflangRoutes";
+
 
 
 export const metadata: Metadata = {
@@ -16,13 +18,14 @@ export const metadata: Metadata = {
     url: `${siteUrl}/es/sobre-nosotros`,
     locale: "es_CO",
   },
-   alternates: {
-    canonical: `${siteUrl}/es/sobre-nosotros`,
-    languages: {
-      es: `${siteUrl}/es/sobre-nosotros`,
-      en: `${siteUrl}/en/about`,
-      de: `${siteUrl}/de/uber-uns`,
-    },},
+  alternates: makeAlternates("sobre-nosotros", "es"),
+  //  alternates: {
+  //   canonical: `${siteUrl}/es/sobre-nosotros`,
+  //   languages: {
+  //     es: `${siteUrl}/es/sobre-nosotros`,
+  //     en: `${siteUrl}/en/about`,
+  //     de: `${siteUrl}/de/uber-uns`,
+  //   },},
 };
 
 export default function AboutPageES() {

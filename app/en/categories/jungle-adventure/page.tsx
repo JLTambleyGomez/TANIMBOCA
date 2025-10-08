@@ -3,6 +3,9 @@ import Image from "next/image";
 import NavbarEN from "@/components/NavbarEN";
 import FooterEN from "@/components/FooterEN";
 import { siteUrl } from "@/lib/seo";
+import { makeAlternates } from "@/lib/hreflangRoutes";
+
+
 export const metadata: Metadata = {
     title: "Jungle Adventure | Ecotourism in Tanimboca",
     description:
@@ -14,14 +17,15 @@ export const metadata: Metadata = {
             url: `${siteUrl}/en/categories/jungle-adventure`,
             locale: "en_US",
     },
-    alternates: {
-            canonical: `${siteUrl}/en/categories/jungle-adventure`,
-        languages: {
-                es: `${siteUrl}/es/categorias/aventura-selva-adentro`,
-                de: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
-                en: `${siteUrl}/en/categories/jungle-adventure`,
-        },
-    },
+    alternates: makeAlternates("categorias/aventura-selva-adentro", "en"),
+    // alternates: {
+    //         canonical: `${siteUrl}/en/categories/jungle-adventure`,
+    //     languages: {
+    //             es: `${siteUrl}/es/categorias/aventura-selva-adentro`,
+    //             de: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
+    //             en: `${siteUrl}/en/categories/jungle-adventure`,
+    //     },
+    // },
 };
 
 export default function JungleAdventurePageEN() {

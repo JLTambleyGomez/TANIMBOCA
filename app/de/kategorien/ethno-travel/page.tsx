@@ -4,6 +4,7 @@ import Image from "next/image";
 import NavbarDE from "@/components/NavbarDE";
 import FooterDE from "@/components/FooterDE";
 import { siteUrl } from "@/lib/seo";
+import { makeAlternates } from "@/lib/hreflangRoutes";
 
 
 export const metadata: Metadata = {
@@ -17,14 +18,15 @@ export const metadata: Metadata = {
     url: `${siteUrl}/de/kategorien/ethno-travel`,
     locale: "de_DE",
   },
-  alternates: {
-    canonical: `${siteUrl}/de/kategorien/ethno-travel`,
-    languages: {
-        es: `${siteUrl}/es/categorias/ethno-travel`,
-        en: `${siteUrl}/en/categories/ethno-travel`,
-        de: `${siteUrl}/de/kategorien/ethno-travel`,
-    },
-  },
+  // alternates: {
+  //   canonical: `${siteUrl}/de/kategorien/ethno-travel`,
+  //   languages: {
+  //       es: `${siteUrl}/es/categorias/ethno-travel`,
+  //       en: `${siteUrl}/en/categories/ethno-travel`,
+  //       de: `${siteUrl}/de/kategorien/ethno-travel`,
+  //   },
+  // },
+  alternates: makeAlternates("categorias/ethno-travel", "de"),
 };
 
 export default function EthnoTravelPageDE() {

@@ -7,6 +7,8 @@ import AboutEN from "@/components/AboutEN";
 import CategoriesCardEN from "@/components/CategoriesCardEN";
 import CallToActionEN from "@/components/CallToActionEN";
 import FooterEN from "@/components/FooterEN";
+import { makeAlternates } from "@/lib/hreflangRoutes";
+
 
 export const metadata: Metadata = {
   title: "Amazon Rainforest Tours & Personalized Adventures in Colombia",
@@ -32,13 +34,14 @@ export const metadata: Metadata = {
       url: `${siteUrl}/en`,
     locale: "en_US",
   },
-  alternates: {
-    canonical:  `${siteUrl}/en`,
-    languages: {
-      es:  `${siteUrl}/es`,
-      de:  `${siteUrl}/de`,
-    },
-  },
+  alternates: makeAlternates("home", "en"),
+  // alternates: {
+  //   canonical:  `${siteUrl}/en`,
+  //   languages: {
+  //     es:  `${siteUrl}/es`, 
+  //     de:  `${siteUrl}/de`,
+  //   },
+  // },
 };
 
 export default function HomeEN() {

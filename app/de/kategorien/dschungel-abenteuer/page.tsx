@@ -3,6 +3,7 @@ import Image from "next/image";
 import NavbarDE from "@/components/NavbarDE";
 import FooterDE from "@/components/FooterDE";
 import { siteUrl } from "@/lib/seo";
+import { makeAlternates } from "@/lib/hreflangRoutes";
 
 export const metadata: Metadata = {
     title: "Dschungel-Abenteuer | Ökotourismus in Tanimboca",
@@ -15,14 +16,15 @@ export const metadata: Metadata = {
             url: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
             locale: "de_DE",
     },
-    alternates: {
-        canonical: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
-        languages: {
-              es: `${siteUrl}/es/categorias/aventura-selva-adentro`,
-            en: `${siteUrl}/en/categories/jungle-adventure`,
-            de: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
-        },
-    },
+    alternates: makeAlternates("categorias/aventura-selva-adentro", "de"),
+    // alternates: {
+    //     canonical: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
+    //     languages: {
+    //           es: `${siteUrl}/es/categorias/aventura-selva-adentro`,
+    //         en: `${siteUrl}/en/categories/jungle-adventure`,
+    //         de: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
+    //     },
+    // },
 };
 
 export default function DschungelAbenteuerPageDE() {
