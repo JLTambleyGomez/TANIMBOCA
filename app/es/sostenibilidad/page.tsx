@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteUrl}/es/sostenibilidad`,
     languages: {
-      en: "/en/sustainability",
+      en :`${siteUrl}/es/sostenibilidad`,
       de: `${siteUrl}/de/nachhaltigkeit`,
       es: `${siteUrl}/es/sostenibilidad`,
     },
