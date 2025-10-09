@@ -6,10 +6,10 @@ import FooterES from "@/components/FooterES";
 import { siteUrl } from "@/lib/seo";
 import { makeAlternates } from "@/lib/hreflangRoutes";
 export const metadata = {
-  title: "Galería Ethno Travel | Reserva Tanimboca",
+  title: "Galería | Reserva Tanimboca",
   description: "Explora imágenes auténticas de experiencias culturales en el Amazonas.",
   openGraph: {
-    title: "Galería Ethno Travel | Reserva Tanimboca",
+    title: "Galería | Reserva Tanimboca",
     description: "Explora imágenes auténticas de experiencias culturales en el Amazonas.",
       url: `${siteUrl}/es/galeria`,
     locale: "es_CO",
