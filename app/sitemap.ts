@@ -1,241 +1,36 @@
 import { MetadataRoute } from "next";
-import { siteUrl } from "@/lib/seo";
+import { hreflangRoutes, makeAlternates, HreflangRouteKey } from "@/lib/hreflangRoutes";
+
+const now = new Date();
+
+const pageConfig: Record<HreflangRouteKey, { priority: number; changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] }> = {
+  home: { priority: 1, changeFrequency: "weekly" },
+  sostenibilidad: { priority: 0.8, changeFrequency: "monthly" },
+  galeria: { priority: 0.7, changeFrequency: "monthly" },
+  "sobre-nosotros": { priority: 0.7, changeFrequency: "monthly" },
+  "categorias/descubriendo-el-amazonas": { priority: 0.9, changeFrequency: "weekly" },
+  "categorias/aventura-selva-adentro": { priority: 0.9, changeFrequency: "weekly" },
+  "categorias/bushcraft-supervivencia": { priority: 0.9, changeFrequency: "weekly" },
+  "categorias/ethno-travel": { priority: 0.9, changeFrequency: "weekly" },
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const urls: MetadataRoute.Sitemap = [];
 
-  const urls: MetadataRoute.Sitemap = [
-    // 🌐 HOME ES
-    {
-      url: `${siteUrl}/es`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1,
-      alternates: {
-        languages: {
-          es: `${siteUrl}/es`,
-          en: `${siteUrl}/en`,
-          de: `${siteUrl}/de`,
-        },
-      },
-    },
-    // 🌐 HOME EN
-    {
-      url: `${siteUrl}/en`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1,
-      alternates: {
-        languages: {
-          es: `${siteUrl}/es`,
-          en: `${siteUrl}/en`,
-          de: `${siteUrl}/de`,
-        },
-      },
-    },
-    // 🌐 HOME DE
-    {
-      url: `${siteUrl}/de`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1,
-      alternates: {
-        languages: {
-          es: `${siteUrl}/es`,
-          en: `${siteUrl}/en`,
-          de: `${siteUrl}/de`,
-        },
-      },
-    },
-    // 🌍 Sostenibilidad
-    {
-      url: `${siteUrl}/es/sostenibilidad`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      alternates: {
-        languages: {
-          es: `${siteUrl}/es/sostenibilidad`,
-          en: `${siteUrl}/en/sustainability`,
-          de: `${siteUrl}/de/nachhaltigkeit`,
-        },
-      },
-    },
-    {
-      url: `${siteUrl}/en/sustainability`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/de/nachhaltigkeit`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    // 🌱 Categoría: Descubriendo el Amazonas (ES)
-    {
-      url: `${siteUrl}/es/categorias/descubriendo-el-amazonas`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          es: `${siteUrl}/es/categorias/descubriendo-el-amazonas`,
-          en: `${siteUrl}/en/categories/discovering-the-amazon`,
-          de: `${siteUrl}/de/kategorien/amazonas-entdecken`,
-        },
-      },
-    },
-    // EN
-    {
-      url: `${siteUrl}/en/categories/discovering-the-amazon`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    // DE
-    {
-      url: `${siteUrl}/de/kategorien/amazonas-entdecken`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
+  (Object.keys(hreflangRoutes) as HreflangRouteKey[]).forEach((key) => {
+    ["es", "en", "de"].forEach((lang) => {
+      const alternates = makeAlternates(key, lang as "es" | "en" | "de");
+      const config = pageConfig[key];
 
-    // 🏕 Aventura Selva Adentro
-    {
-      url: `${siteUrl}/es/categorias/aventura-selva-adentro`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          es: `${siteUrl}/es/categorias/aventura-selva-adentro`,
-          en: `${siteUrl}/en/categories/jungle-adventure`,
-          de: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
-        },
-      },
-    },
-    {
-      url: `${siteUrl}/en/categories/jungle-adventure`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/de/kategorien/dschungel-abenteuer`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-
-    // 🔥 Bushcraft y Supervivencia
-    {
-      url: `${siteUrl}/es/categorias/bushcraft-supervivencia`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          es: `${siteUrl}/es/categorias/bushcraft-supervivencia`,
-          en: `${siteUrl}/en/categories/bushcraft-survival`,
-          de: `${siteUrl}/de/kategorien/bushcraft`,
-        },
-      },
-    },
-    {
-      url: `${siteUrl}/en/categories/bushcraft-survival`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/de/kategorien/bushcraft`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-
-    // 🪶 Ethno Travel
-    {
-      url: `${siteUrl}/es/categorias/ethno-travel`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          es: `${siteUrl}/es/categorias/ethno-travel`,
-          en: `${siteUrl}/en/categories/ethno-travel`,
-          de: `${siteUrl}/de/kategorien/ethno-travel`,
-        },
-      },
-    },
-    {
-      url: `${siteUrl}/en/categories/ethno-travel`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/de/kategorien/ethno-reisen`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-
-    // 📄 Sobre nosotros
-    {
-      url: `${siteUrl}/es/sobre-nosotros`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-      alternates: {
-        languages: {
-          es: `${siteUrl}/es/sobre-nosotros`,
-          en: `${siteUrl}/en/about`,
-          de: `${siteUrl}/de/uber-uns`,
-        },
-      },
-    },
-    {
-      url: `${siteUrl}/en/about`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${siteUrl}/de/uber-uns`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    // galeria
-    {
-      url: `${siteUrl}/es/galeria`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-      alternates: {
-        languages: {
-          es: `${siteUrl}/es/galeria`,
-          en: `${siteUrl}/en/gallery`,
-          de: `${siteUrl}/de/galerie`,
-        },
-      },
-    },
-    {
-      url: `${siteUrl}/en/gallery`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${siteUrl}/de/galerie`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-  ];
+      urls.push({
+        url: alternates.canonical,
+        lastModified: now,
+        priority: config?.priority ?? 0.5,
+        changeFrequency: config?.changeFrequency ?? "monthly",
+        alternates,
+      });
+    });
+  });
 
   return urls;
 }
