@@ -32,7 +32,7 @@ export default function ResearchExtraPageEN() {
           Tanimboca offers essential support for scientific and conservation
           research projects in the Amazon. We provide logistics, accommodation,
           and expert local knowledge to help researchers and conservationists
-          succeed in their studies of the region's unique ecosystems.
+          succeed in their studies of the region&apos;s unique ecosystems.
         </p>
 
         {/* Image */}
