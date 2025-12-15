@@ -29,10 +29,12 @@ export default function DELayout({ children }: { children: ReactNode }) {
         name: "Amazonas Entdecken",
         item: `${siteUrl}/de/categories/amazonas-entdecken`,
       },
-      {"@type": "ListItem",
+      {
+        "@type": "ListItem",
         position: 4,
         name: "Dschungel Abenteuer",
-        item: `${siteUrl}/de/categories/dschungel-abenteuer`,},
+        item: `${siteUrl}/de/categories/dschungel-abenteuer`,
+      },
       {
         "@type": "ListItem",
         position: 5,
@@ -43,28 +45,53 @@ export default function DELayout({ children }: { children: ReactNode }) {
         "@type": "ListItem",
         position: 6,
         name: "Nachhaltigkeit",
-        item: `${siteUrl}/de/nachhaltigkeit`,}
-        ,
+        item: `${siteUrl}/de/nachhaltigkeit`,
+      },
       {
         "@type": "ListItem",
         position: 7,
         name: "Ethno-travel",
-        item: `${siteUrl}/de/ethno-travel`,},
-
-    {
+        item: `${siteUrl}/de/ethno-travel`,
+      },
+      {
         "@type": "ListItem",
         position: 8,
-        name: "galerie",
-        item: `${siteUrl}/de/galerie`,},
-        
-   
+        name: "Galerie",
+        item: `${siteUrl}/de/galerie`,
+      },
+
+      // NUEVAS PÁGINAS EXTRAS
+      {
+        "@type": "ListItem",
+        position: 9,
+        name: "Amphibien",
+        item: `${siteUrl}/de/extras/amphibien`,
+      },
+      {
+        "@type": "ListItem",
+        position: 10,
+        name: "Vogelbeobachtung",
+        item: `${siteUrl}/de/extras/vogelbeobachtung`,
+      },
+      {
+        "@type": "ListItem",
+        position: 11,
+        name: "Zierfische",
+        item: `${siteUrl}/de/extras/zierfische`,
+      },
+      {
+        "@type": "ListItem",
+        position: 12,
+        name: "Forschung",
+        item: `${siteUrl}/de/extras/forschung`,
+      },
     ],
   };
 
   return (
     <html lang="de">
       <head>
-          <meta httpEquiv="Content-Language" content="de" />
+        <meta httpEquiv="Content-Language" content="de" />
 
         <script
           id="breadcrumb-schema-de"

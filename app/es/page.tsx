@@ -7,7 +7,10 @@ import AboutES from "@/components/AboutES";
 import CategoriesCardES from "@/components/CategoriesCardES";
 import CallToActionES from "@/components/CallToActionES";
 import FooterES from "@/components/FooterES";
+import ExtrasCardES from "@/components/ExtrasCardES";
+import WhatToBringES from "@/components/WhatToBringES";
 import { makeAlternates } from "@/lib/hreflangRoutes";
+import PersonalizedPlansES from "@/components/PersonalizedPlansES";
 
 export const metadata: Metadata = {
   title: "Aventuras en la Selva Amazónica | Reserva Natural Tanimboca",
@@ -43,6 +46,9 @@ export default function HomeES() {
       <HeroES />
       <AboutES />
       <CategoriesCardES />
+      <ExtrasCardES />
+      <PersonalizedPlansES />
+      <WhatToBringES />
       <CallToActionES />
       <FooterES />
 

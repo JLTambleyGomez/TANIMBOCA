@@ -59,6 +59,32 @@ export default function ESLayout({ children }: { children: ReactNode }) {
         name: "Galería",
         item: `${siteUrl}/es/galeria`,
       },
+
+      // NUEVA SECCIÓN: EXTRAS
+      {
+        "@type": "ListItem",
+        position: 9,
+        name: "Exploración: Anfibios",
+        item: `${siteUrl}/es/extras/anfibios`,
+      },
+      {
+        "@type": "ListItem",
+        position: 10,
+        name: "Avistamiento de Aves",
+        item: `${siteUrl}/es/extras/aves`,
+      },
+      {
+        "@type": "ListItem",
+        position: 11,
+        name: "Peces Ornamentales",
+        item: `${siteUrl}/es/extras/peces-ornamentales`,
+      },
+      {
+        "@type": "ListItem",
+        position: 12,
+        name: "Investigación Científica",
+        item: `${siteUrl}/es/extras/investigacion`,
+      },
     ],
   };
 
@@ -67,13 +93,13 @@ export default function ESLayout({ children }: { children: ReactNode }) {
       <head>
         <meta httpEquiv="Content-Language" content="es" />
 
-        {/* Breadcrumb Schema en SSR, igual que EN/DE */}
         <script
           id="breadcrumb-schema-es"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
       </head>
+
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>

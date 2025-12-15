@@ -30,11 +30,10 @@ export default function ENLayout({ children }: { children: ReactNode }) {
         item: `${siteUrl}/en/categories/discovering-the-amazon`,
       },
       {
-  "@type": "ListItem",
+        "@type": "ListItem",
         position: 4,
         name: "Jungle Adventure",
         item: `${siteUrl}/en/categories/jungle-adventure`,
-
       },
       {
         "@type": "ListItem",
@@ -46,36 +45,60 @@ export default function ENLayout({ children }: { children: ReactNode }) {
         "@type": "ListItem",
         position: 6,
         name: "Sustainability",
-        item: `${siteUrl}/en/sustainability`,}
-        ,
+        item: `${siteUrl}/en/sustainability`,
+      },
       {
         "@type": "ListItem",
         position: 7,
         name: "Ethno-travel",
-        item: `${siteUrl}/en/ethno-travel`,}
-    ,
+        item: `${siteUrl}/en/ethno-travel`,
+      },
       {
         "@type": "ListItem",
         position: 8,
-        name: "gallery",
-        item: `${siteUrl}/en/gallery`,}
-   
-   
-      
+        name: "Gallery",
+        item: `${siteUrl}/en/gallery`,
+      },
+
+      // NEW EXTRAS SECTION
+      {
+        "@type": "ListItem",
+        position: 9,
+        name: "Amphibians",
+        item: `${siteUrl}/en/extras/amphibians`,
+      },
+      {
+        "@type": "ListItem",
+        position: 10,
+        name: "Birdwatching",
+        item: `${siteUrl}/en/extras/birdwatching`,
+      },
+      {
+        "@type": "ListItem",
+        position: 11,
+        name: "Ornamental Fish",
+        item: `${siteUrl}/en/extras/ornamental-fish`,
+      },
+      {
+        "@type": "ListItem",
+        position: 12,
+        name: "Research",
+        item: `${siteUrl}/en/extras/research`,
+      },
     ],
   };
 
   return (
     <html lang="en">
       <head>
-          <meta httpEquiv="Content-Language" content="en" />
-
+        <meta httpEquiv="Content-Language" content="en" />
         <script
           id="breadcrumb-schema-en"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
       </head>
+
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>

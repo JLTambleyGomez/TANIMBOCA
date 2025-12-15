@@ -6,8 +6,11 @@ import AboutDE from "@/components/AboutDE";
 import CategoriesCardDE from "@/components/CategoriesCardDE";
 import CallToActionDE from "@/components/CallToActionDE";
 import FooterDE from "@/components/FooterDE";
+import WhatToBringDE from "@/components/WhatToBringDE";
+import ExtrasCardDE from "@/components/ExtrasCardDE";
 import { siteUrl } from "@/lib/seo";
 import { makeAlternates } from "@/lib/hreflangRoutes";
+import PersonalizedPlansDE from "@/components/PersonalizedPlansDE";
 
 export const metadata: Metadata = {
   title: "Abenteuer im Amazonas Regenwald | Tanimboca Naturreservat",
@@ -43,6 +46,9 @@ export default function HomeDE() {
       <HeroDE />
       <AboutDE />
       <CategoriesCardDE />
+      <ExtrasCardDE />
+      <PersonalizedPlansDE />
+      <WhatToBringDE />
       <CallToActionDE />
       <FooterDE />
 

@@ -7,8 +7,10 @@ import AboutEN from "@/components/AboutEN";
 import CategoriesCardEN from "@/components/CategoriesCardEN";
 import CallToActionEN from "@/components/CallToActionEN";
 import FooterEN from "@/components/FooterEN";
+import WhatToBringEN from "@/components/WhatToBringEN";
+import ExtrasCardEN from "@/components/ExtrasCardEN";
 import { makeAlternates } from "@/lib/hreflangRoutes";
-
+import PersonalizedPlansEN from "@/components/PersonalizedPlansEN";
 export const metadata: Metadata = {
   title: "Amazon Rainforest Tours & Personalized Adventures in Colombia",
   description:
@@ -43,6 +45,9 @@ export default function HomeEN() {
       <HeroEN />
       <AboutEN />
       <CategoriesCardEN />
+      <ExtrasCardEN />
+      <PersonalizedPlansEN />
+      <WhatToBringEN />
       <CallToActionEN />
       <FooterEN />
 

@@ -3,7 +3,7 @@ import { siteUrl } from "@/lib/seo";
 
 export const hreflangRoutes = {
   // 🌐 Home
-  home: {
+  "home": {
     es: "/es",
     en: "/en",
     de: "/de",
@@ -14,6 +14,31 @@ export const hreflangRoutes = {
     es: "/es/sobre-nosotros",
     en: "/en/about",
     de: "/de/uber-uns",
+  },
+
+  // extras
+  // 🌿 Amphibian Exploration
+  "extras/anfibios": {
+    es: "/es/extras/anfibios",
+    en: "/en/extras/amphibians",
+    de: "/de/extras/amphibien",
+  },
+
+  "extras/peces-ornamentales": {
+    es: "/es/extras/peces-ornamentales",
+    en: "/en/extras/ornamental-fish",
+    de: "/de/extras/zierfische",
+  },
+  "extras/aves": {
+    es: "/es/extras/aves",
+    en: "/en/extras/birdwatching",
+    de: "/de/extras/vogelbeobachtung",
+  },
+
+  "extras/investigacion": {
+    es: "/es/extras/investigacion",
+    en: "/en/extras/research",
+    de: "/de/extras/forschung",
   },
 
   // 🌱 Descubriendo el Amazonas
